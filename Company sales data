@@ -1,0 +1,31 @@
+#     a) Show the Total profit of all months using a line plot
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+a=pd.read_csv("club.csv")
+%matplotlib inline
+plt.plot(a.month_number,a.total_profit,marker=11,color='green', linestyle='dashed')
+plt.title("Total profit of all months ",size="30")
+plt.xlabel("month_number",size="25")
+plt.ylabel("total_profit",size="20")
+
+
+#    b) Show all product sales data using a multiline plot
+w=list(a.columns[1:7])
+plt.plot(a[w],marker=11, linestyle='dotted')
+plt.legend(w,loc='upper right')
+plt.title(" All product sales data ",size="30")
+plt.grid(True)
+plt.xlabel("month_number",size="20")
+plt.ylabel("product sales",size="20")
+
+
+#     c) Calculate total sales data for last year for each product and show it using a Pie chart
+s=a.sum(axis=0)
+colors = ['#ffa64d','#ff4d4d','#99ff99','#ff4dff','#ffff4d','#c994ff']
+plt.pie(s[2:8],labels=list(a.columns[2:8]),colors=colors,autopct='%1.1f%%',shadow=True)
+plt.title(" total sales data for last year for  each product",size="25")
+
+
+ 
