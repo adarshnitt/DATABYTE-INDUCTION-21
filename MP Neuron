@@ -1,0 +1,24 @@
+class MPNeuron:
+    def __init__(self,n,inputs,weights,threshold ):
+        self.n=3 
+        self.inputs=[1,1,1]
+        self.weights=[1,1,1]
+        self.threshold=2.5
+        
+    def MP_Neuron_Input(self,n,inputs,weights):
+        import numpy as np
+        self.n=n
+        self.inputs=inputs
+        self.weights=weights
+        weights=np.array(weights)
+        inputs=np.array(inputs)
+        a=weights*inputs
+        a=sum(a)
+        return a
+    def MP_Neuron_Evaluate(self,data,threshold):
+        self.data=data
+        self.threshold=threshold
+        if data>=threshold:
+            return 1
+        else:
+            return 0
