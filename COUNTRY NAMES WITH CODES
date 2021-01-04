@@ -1,7 +1,6 @@
 import pandas as pd
 c={}
 data=pd.read_csv("data_csv.csv",encoding='ISO-8859-1')
-
 for i in range(249):
     aa=data.Name[i]
     q=data.Code[i]
