@@ -1,7 +1,6 @@
 dataset= https://www.google.com/url?q=https://drive.google.com/file/d/197_no54kWCOx9Y1Kk2c6QsiYhTsa8lRl/view?usp%3Dsharing&sa=D&ust=1609783335306000&usg=AFQjCNHnH0VBjIC9mp1IDzJxo5PdfY_oxQ
 
 
-
 import pandas as pd
 c={}
 data=pd.read_csv("data_csv.csv",encoding='ISO-8859-1')
